@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>  
+		<script>
+			window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+				animationEnabled: true,
+				theme: "light2",
+				title:{
+					text: "PSE: Jollibee Foods Corporation"
+				},
+				axisX:{
+			        title: "Date"
+			    },
+				axisY:{
+					title: "Price (PHP)",
+					includeZero: false
+				},
+				data: [{        
+					type: "line",       
+					dataPoints: [
+						{ x: new Date(2018, 08, 27), y: 259 },
+						{ x: new Date(2018, 08, 28), y: 257 },
+						{ x: new Date(2018, 09, 01), y: 252 },
+						{ x: new Date(2018, 09, 02), y: 250 },
+						{ x: new Date(2018, 09, 03), y: 252 },
+						{ x: new Date(2018, 09, 04), y: 252 },
+						{ x: new Date(2018, 09, 05), y: 247 },
+						{ x: new Date(2018, 09, 08), y: 243, indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+						{ x: new Date(2018, 09, 09), y: 252.4 },
+						{ x: new Date(2018, 09, 10), y: 254 },
+						{ x: new Date(2018, 09, 11), y: 254 },
+						{ x: new Date(2018, 09, 12), y: 262, indexLabel: "highest",markerColor: "red", markerType: "triangle" }
+					]
+				}]
+			});
+
+			chart.render();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	</body>
+</html>
